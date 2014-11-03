@@ -10,14 +10,14 @@
 	<string>GETPOST</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D694E30E4E24FD5E946D513034798FDEC9A2F2DC</key>
+		<key>13A778A3BEF710683ECD5AE5A3AF6E911A66DA34</key>
 		<string>https://github.com/BaiCanLin/GETPOST.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>GETPOST.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D694E30E4E24FD5E946D513034798FDEC9A2F2DC</key>
+		<key>13A778A3BEF710683ECD5AE5A3AF6E911A66DA34</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D694E30E4E24FD5E946D513034798FDEC9A2F2DC</string>
+	<string>13A778A3BEF710683ECD5AE5A3AF6E911A66DA34</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D694E30E4E24FD5E946D513034798FDEC9A2F2DC</string>
+			<string>13A778A3BEF710683ECD5AE5A3AF6E911A66DA34</string>
 			<key>IDESourceControlWCCName</key>
 			<string>GETPOST</string>
 		</dict>

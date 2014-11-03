@@ -1,3 +1,9 @@
+/**
+ *  封装的网络请求 支持ASI 和 最新的AFN
+ *  默认使用 AFN 有其他需求需要使用ASI的，注视相关代码，打开ASI即可
+ *  邮箱 : sshare@qq.com
+ *  https://github.com/BaiCanLin/GETPOST
+ */
 
 #import "BaseHttpTool.h"
 #import "Reachability.h"
@@ -57,7 +63,6 @@ static YTKKeyValueStore *store;
 
 +(void)getCacheWithUrl:(NSString *)url parameters:(NSDictionary *)parameters sucess:(BaseHttpToolSucess)sucess failur:(BaseHttpToolFailur)failur
 {
-    // 1.创建GET请求
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
     // 开启网络指示器
     [[AFNetworkActivityIndicatorManager sharedManager]setEnabled:YES];
@@ -138,6 +143,9 @@ static YTKKeyValueStore *store;
 //    [request startAsynchronous];
 //}
 
+/**
+ *  判断网络连接
+ */
 +(int)reachabilityConnectionNetWork
 {
     Reachability *connectionNetWork = [Reachability reachabilityWithHostName:@"www.baidu.com"];

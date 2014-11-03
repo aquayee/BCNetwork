@@ -1,12 +1,13 @@
 /**
- *  封装的网络请求 支持ASI 和 最新的AFN
+ *  这是一个简单的请求工具类,封装的网络请求 支持ASI 和 最新的AFN
  *  默认使用 AFN 有其他需求需要使用ASI的，注视相关代码，打开ASI即可
  *  邮箱 : sshare@qq.com
+ *  https://github.com/BaiCanLin/GETPOST
  */
 
 #import <Foundation/Foundation.h>
 
-typedef void (^BaseHttpToolSucess)(NSDictionary * json);
+typedef void (^BaseHttpToolSucess)(id json);
 typedef void (^BaseHttpToolFailur)(NSError *error);
 
 @interface BaseHttpTool : NSObject
