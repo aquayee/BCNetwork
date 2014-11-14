@@ -4,7 +4,7 @@
 //#import "ASIFormDataRequest.h"
 #import "AFNetworking.h"
 #import "AFNetworkActivityIndicatorManager.h"
-#import "RNCachingURLProtocol.h"
+#import "YTKKeyValueStore.h"
 
 @implementation BaseHttpTool
 
@@ -12,8 +12,6 @@ static YTKKeyValueStore *_store;
 
 +(void)postWithUrl:(NSString *)url parameters:(NSDictionary *)parameters sucess:(BaseHttpToolSucess)sucess failur:(BaseHttpToolFailur)failur
 {
-    [NSURLProtocol unregisterClass:[RNCachingURLProtocol class]];
-    
     // 1.创建POST请求
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
     
@@ -29,21 +27,12 @@ static YTKKeyValueStore *_store;
           }
       }];
     
-    /**
-     *  这里是特殊需求 不需要webView 缓存直接注视掉
-     */
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [NSURLProtocol registerClass:[RNCachingURLProtocol class]];
-    });
-    
     // 这个底层封装的是ASI post请求
 //    [self requestWithMethod:@"POST" url:url parameters:parameters sucess:sucess failur:failur];
 }
 
 +(void)getCacheWithUrl:(NSString *)url option:(BcRequestCenterCachePolicy)option parameters:(NSDictionary *)parameters sucess:(BaseHttpToolSucess)sucess failur:(BaseHttpToolFailur)failur
 {
-    [NSURLProtocol unregisterClass:[RNCachingURLProtocol class]];
-    
     // 1.创建GET请求
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
     // 开启网络指示器
@@ -135,13 +124,6 @@ static YTKKeyValueStore *_store;
         default:
             break;
     }
-    
-    /**
-     *  这里是特殊需求 不需要webView 缓存直接注视掉
-     */
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [NSURLProtocol registerClass:[RNCachingURLProtocol class]];
-    });
     
     // 这个底层封装的是ASI get请求
     //    [BaseHttpTool requestWithMethod:@"GET" url:url parameters:parameters sucess:sucess failur:failur];
