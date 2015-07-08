@@ -45,4 +45,24 @@ typedef NS_ENUM(NSUInteger, BcRequestCenterCachePolicy) {
  */
 +(void)getCacheWithUrl:(NSString *)url option:(BcRequestCenterCachePolicy)option parameters:(NSDictionary *)parameters sucess:(BaseHttpToolSucess)sucess failur:(BaseHttpToolFailur)failur;
 
+/**
+ *  PUT
+ *
+ *  @param url    请求的 url
+ *  @param parm   请求的参数
+ *  @param sucess 请求成功后的回调
+ *  @param failur 请求失败后的回调
+ */
++(void)putWithUrl:(NSString *)url parm:(id)parm sucess:(void (^)(id json))sucess failur:(void (^)(NSError *error))failur;
+
+/**
+ *  DELETE
+ *
+ *  @param url    请求的 url
+ *  @param parm   请求的参数
+ *  @param sucess 请求成功后的回调
+ *  @param failur 请求失败后的回调
+ */
++(void)DELETE:(NSString *)URLString parameters:(NSDictionary *)parameters sucess:(void (^)(id json))sucess failur:(void (^)(NSError *error))failur;
+
 @end
