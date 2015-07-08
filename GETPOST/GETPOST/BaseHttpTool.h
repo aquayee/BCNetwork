@@ -19,11 +19,6 @@ typedef NS_ENUM(NSUInteger, BcRequestCenterCachePolicy) {
     BcRequestCenterCachePolicyNormal,
     
     /**
-     *  如果有网络直接读网络，如果没网络直接读本地
-     */
-    BcRequestCenterCachePolicyCacheAndRefresh,
-    
-    /**
      *  优先读取本地，不管有没有网络，优先读取本地
      */
     BcRequestCenterCachePolicyCacheAndLocal

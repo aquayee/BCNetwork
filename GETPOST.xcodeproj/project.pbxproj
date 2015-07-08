@@ -32,14 +32,6 @@
 		18E1E7C019F63A5A0008FF95 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E1E79B19F63A5A0008FF95 /* UIRefreshControl+AFNetworking.m */; };
 		18E1E7C119F63A5A0008FF95 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E1E79D19F63A5A0008FF95 /* UIWebView+AFNetworking.m */; };
 		18E1E7C219F63A5A0008FF95 /* BaseHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E1E79F19F63A5A0008FF95 /* BaseHttpTool.m */; };
-		18E1E7C319F63A5A0008FF95 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E1E7A219F63A5A0008FF95 /* FMDatabase.m */; };
-		18E1E7C419F63A5A0008FF95 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E1E7A419F63A5A0008FF95 /* FMDatabaseAdditions.m */; };
-		18E1E7C519F63A5A0008FF95 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E1E7A619F63A5A0008FF95 /* FMDatabasePool.m */; };
-		18E1E7C619F63A5A0008FF95 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E1E7A819F63A5A0008FF95 /* FMDatabaseQueue.m */; };
-		18E1E7C719F63A5A0008FF95 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E1E7AB19F63A5A0008FF95 /* FMResultSet.m */; };
-		18E1E7C819F63A5A0008FF95 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E1E7AE19F63A5A0008FF95 /* Reachability.m */; };
-		18E1E7C919F63A5A0008FF95 /* YTKKeyValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E1E7B019F63A5A0008FF95 /* YTKKeyValueStore.m */; };
-		18E1E7CB19F63A750008FF95 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E1E7CA19F63A750008FF95 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,21 +96,6 @@
 		18E1E79D19F63A5A0008FF95 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		18E1E79E19F63A5A0008FF95 /* BaseHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHttpTool.h; sourceTree = "<group>"; };
 		18E1E79F19F63A5A0008FF95 /* BaseHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHttpTool.m; sourceTree = "<group>"; };
-		18E1E7A119F63A5A0008FF95 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		18E1E7A219F63A5A0008FF95 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		18E1E7A319F63A5A0008FF95 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		18E1E7A419F63A5A0008FF95 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		18E1E7A519F63A5A0008FF95 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		18E1E7A619F63A5A0008FF95 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		18E1E7A719F63A5A0008FF95 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		18E1E7A819F63A5A0008FF95 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		18E1E7A919F63A5A0008FF95 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		18E1E7AA19F63A5A0008FF95 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		18E1E7AB19F63A5A0008FF95 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		18E1E7AD19F63A5A0008FF95 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		18E1E7AE19F63A5A0008FF95 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		18E1E7AF19F63A5A0008FF95 /* YTKKeyValueStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKKeyValueStore.h; sourceTree = "<group>"; };
-		18E1E7B019F63A5A0008FF95 /* YTKKeyValueStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKKeyValueStore.m; sourceTree = "<group>"; };
 		18E1E7CA19F63A750008FF95 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -127,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18E1E7CB19F63A750008FF95 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,12 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				18E1E77819F63A5A0008FF95 /* AFNetworking */,
-				18E1E7A019F63A5A0008FF95 /* FMDB */,
-				18E1E7AC19F63A5A0008FF95 /* Reachability */,
 				18E1E79E19F63A5A0008FF95 /* BaseHttpTool.h */,
 				18E1E79F19F63A5A0008FF95 /* BaseHttpTool.m */,
-				18E1E7AF19F63A5A0008FF95 /* YTKKeyValueStore.h */,
-				18E1E7B019F63A5A0008FF95 /* YTKKeyValueStore.m */,
 			);
 			path = GETPOST;
 			sourceTree = "<group>";
@@ -265,33 +237,6 @@
 				18E1E79D19F63A5A0008FF95 /* UIWebView+AFNetworking.m */,
 			);
 			path = "UIKit+AFNetworking";
-			sourceTree = "<group>";
-		};
-		18E1E7A019F63A5A0008FF95 /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				18E1E7A119F63A5A0008FF95 /* FMDatabase.h */,
-				18E1E7A219F63A5A0008FF95 /* FMDatabase.m */,
-				18E1E7A319F63A5A0008FF95 /* FMDatabaseAdditions.h */,
-				18E1E7A419F63A5A0008FF95 /* FMDatabaseAdditions.m */,
-				18E1E7A519F63A5A0008FF95 /* FMDatabasePool.h */,
-				18E1E7A619F63A5A0008FF95 /* FMDatabasePool.m */,
-				18E1E7A719F63A5A0008FF95 /* FMDatabaseQueue.h */,
-				18E1E7A819F63A5A0008FF95 /* FMDatabaseQueue.m */,
-				18E1E7A919F63A5A0008FF95 /* FMDB.h */,
-				18E1E7AA19F63A5A0008FF95 /* FMResultSet.h */,
-				18E1E7AB19F63A5A0008FF95 /* FMResultSet.m */,
-			);
-			path = FMDB;
-			sourceTree = "<group>";
-		};
-		18E1E7AC19F63A5A0008FF95 /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				18E1E7AD19F63A5A0008FF95 /* Reachability.h */,
-				18E1E7AE19F63A5A0008FF95 /* Reachability.m */,
-			);
-			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,27 +345,20 @@
 				18E1E7B219F63A5A0008FF95 /* AFHTTPRequestOperationManager.m in Sources */,
 				18E1E7BF19F63A5A0008FF95 /* UIProgressView+AFNetworking.m in Sources */,
 				18E1E7B419F63A5A0008FF95 /* AFNetworkReachabilityManager.m in Sources */,
-				18E1E7C719F63A5A0008FF95 /* FMResultSet.m in Sources */,
 				18E1E7B819F63A5A0008FF95 /* AFURLResponseSerialization.m in Sources */,
 				18E1E7B619F63A5A0008FF95 /* AFURLConnectionOperation.m in Sources */,
 				18E1E7BD19F63A5A0008FF95 /* UIButton+AFNetworking.m in Sources */,
-				18E1E7C319F63A5A0008FF95 /* FMDatabase.m in Sources */,
-				18E1E7C619F63A5A0008FF95 /* FMDatabaseQueue.m in Sources */,
-				18E1E7C419F63A5A0008FF95 /* FMDatabaseAdditions.m in Sources */,
 				18E1E7BB19F63A5A0008FF95 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				18E1E7B519F63A5A0008FF95 /* AFSecurityPolicy.m in Sources */,
-				18E1E7C519F63A5A0008FF95 /* FMDatabasePool.m in Sources */,
 				18E1E7C019F63A5A0008FF95 /* UIRefreshControl+AFNetworking.m in Sources */,
 				18E1E7C119F63A5A0008FF95 /* UIWebView+AFNetworking.m in Sources */,
 				18E1E7B319F63A5A0008FF95 /* AFHTTPSessionManager.m in Sources */,
 				18E1E7BC19F63A5A0008FF95 /* UIAlertView+AFNetworking.m in Sources */,
-				18E1E7C919F63A5A0008FF95 /* YTKKeyValueStore.m in Sources */,
 				18E1E7C219F63A5A0008FF95 /* BaseHttpTool.m in Sources */,
 				18E1E7B719F63A5A0008FF95 /* AFURLRequestSerialization.m in Sources */,
 				18E1E7BA19F63A5A0008FF95 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				18E1E7B919F63A5A0008FF95 /* AFURLSessionManager.m in Sources */,
 				18E1E75719F63A4B0008FF95 /* AppDelegate.m in Sources */,
-				18E1E7C819F63A5A0008FF95 /* Reachability.m in Sources */,
 				18E1E75419F63A4B0008FF95 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
