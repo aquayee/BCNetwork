@@ -10,4 +10,12 @@
 
 @interface UIImageView (BCImageView)
 
+/**
+ *  图片缓存
+ *
+ *  @param cacheImageView 缓存的图片
+ *  @param url            图片的url
+ */
++(void)cacheImageView:(UIImageView *)cacheImageView url:(NSString *)url;
+
 @end

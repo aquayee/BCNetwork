@@ -65,4 +65,6 @@ typedef NS_ENUM(NSUInteger, BcRequestCenterCachePolicy) {
  */
 +(void)DELETE:(NSString *)URLString parameters:(NSDictionary *)parameters sucess:(void (^)(id json))sucess failur:(void (^)(NSError *error))failur;
 
+
+
 @end
