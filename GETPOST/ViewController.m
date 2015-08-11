@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIImageView+BCImageView.h"
+#import "BCNetwork.h"
 
 @interface ViewController ()
 
@@ -17,9 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
-    
 }
 
 @end

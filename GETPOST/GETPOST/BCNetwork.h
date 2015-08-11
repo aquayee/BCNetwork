@@ -9,7 +9,9 @@
 typedef void (^BaseHttpToolSucess)(id json);
 typedef void (^BaseHttpToolFailur)(NSError *error);
 
-@interface BaseHttpTool : NSObject
+@interface BCNetwork : NSObject
+
++ (instancetype)center;
 
 typedef NS_ENUM(NSUInteger, BcRequestCenterCachePolicy) {
     
@@ -32,7 +34,7 @@ typedef NS_ENUM(NSUInteger, BcRequestCenterCachePolicy) {
  *  @param sucess     成功后的回调
  *  @param failur     失败后的回调
  */
-+(void)postWithUrl:(NSString *)url parameters:(NSDictionary *)parameters sucess:(BaseHttpToolSucess)sucess failur:(BaseHttpToolFailur)failur;
+-(void)postWithUrl:(NSString *)url parameters:(NSDictionary *)parameters sucess:(BaseHttpToolSucess)sucess failur:(BaseHttpToolFailur)failur;
 
 /**
  *  带缓存的 get 请求
@@ -43,7 +45,7 @@ typedef NS_ENUM(NSUInteger, BcRequestCenterCachePolicy) {
  *  @param sucess     成功后的回调
  *  @param failur     失败后的回调
  */
-+(void)getCacheWithUrl:(NSString *)url option:(BcRequestCenterCachePolicy)option parameters:(NSDictionary *)parameters sucess:(BaseHttpToolSucess)sucess failur:(BaseHttpToolFailur)failur;
+-(void)getCacheWithUrl:(NSString *)url option:(BcRequestCenterCachePolicy)option parameters:(NSDictionary *)parameters sucess:(BaseHttpToolSucess)sucess failur:(BaseHttpToolFailur)failur;
 
 /**
  *  PUT
@@ -53,7 +55,7 @@ typedef NS_ENUM(NSUInteger, BcRequestCenterCachePolicy) {
  *  @param sucess 请求成功后的回调
  *  @param failur 请求失败后的回调
  */
-+(void)putWithUrl:(NSString *)url parm:(id)parm sucess:(void (^)(id json))sucess failur:(void (^)(NSError *error))failur;
+-(void)putWithUrl:(NSString *)url parm:(id)parm sucess:(void (^)(id json))sucess failur:(void (^)(NSError *error))failur;
 
 /**
  *  DELETE
@@ -63,7 +65,7 @@ typedef NS_ENUM(NSUInteger, BcRequestCenterCachePolicy) {
  *  @param sucess 请求成功后的回调
  *  @param failur 请求失败后的回调
  */
-+(void)DELETE:(NSString *)URLString parameters:(NSDictionary *)parameters sucess:(void (^)(id json))sucess failur:(void (^)(NSError *error))failur;
+-(void)DELETE:(NSString *)URLString parameters:(NSDictionary *)parameters sucess:(void (^)(id json))sucess failur:(void (^)(NSError *error))failur;
 
 
 

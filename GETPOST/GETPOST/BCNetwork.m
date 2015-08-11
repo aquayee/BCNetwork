@@ -1,12 +1,28 @@
 
-#import "BaseHttpTool.h"
+#import "BCNetwork.h"
 #import <YTKKeyValueStore/YTKKeyValueStore.h>
 #import <AFNetworking/AFNetworking.h>
 
-@implementation BaseHttpTool
+@interface BCNetwork()
+@property (strong, nonatomic) AFHTTPRequestOperationManager *manager;
+@end
+
+@implementation BCNetwork
 
 static NSString *_tableName;
 static YTKKeyValueStore *_store;
+
+static BCNetwork *center;
++ (instancetype)center {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (!center) {
+            center = [[BCNetwork alloc]init];
+        }
+    });
+    return center;
+}
+
 +(void)initialize
 {
     static dispatch_once_t onceToken;
@@ -17,13 +33,21 @@ static YTKKeyValueStore *_store;
     });
 }
 
-+(void)postWithUrl:(NSString *)url parameters:(NSDictionary *)parameters sucess:(BaseHttpToolSucess)sucess failur:(BaseHttpToolFailur)failur
+-(AFHTTPRequestOperationManager *)manager
 {
-    // 1.创建POST请求
-    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-    
+    if (!_manager) {
+        _manager = [AFHTTPRequestOperationManager manager];
+        [_manager.requestSerializer setValue:@"accessToken" forHTTPHeaderField:@"Authorization"];
+        [AFHTTPRequestSerializer serializer].timeoutInterval = 1;
+    }
+    return _manager;
+}
+
+// POST
+-(void)postWithUrl:(NSString *)url parameters:(NSDictionary *)parameters sucess:(BaseHttpToolSucess)sucess failur:(BaseHttpToolFailur)failur
+{
     // 2.发送请求
-    [mgr POST:url parameters:parameters
+    [self.manager POST:url parameters:parameters
       success:^(AFHTTPRequestOperation *operation, id responseObject) {
           if (sucess) {
               sucess(responseObject);
@@ -35,17 +59,13 @@ static YTKKeyValueStore *_store;
       }];
 }
 
-+(void)getCacheWithUrl:(NSString *)url option:(BcRequestCenterCachePolicy)option parameters:(NSDictionary *)parameters sucess:(BaseHttpToolSucess)sucess failur:(BaseHttpToolFailur)failur
+// GET
+-(void)getCacheWithUrl:(NSString *)url option:(BcRequestCenterCachePolicy)option parameters:(NSDictionary *)parameters sucess:(BaseHttpToolSucess)sucess failur:(BaseHttpToolFailur)failur
 {
-    // 1.创建GET请求
-    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-//    [mgr.requestSerializer setValue:@"application/vnd.xxx.com+json; version=1" forHTTPHeaderField:@"Accept"];
-    [AFHTTPRequestSerializer serializer].timeoutInterval = 1;
-    
     switch (option) {
         case BcRequestCenterCachePolicyNormal:{ // 普通的网络请求
             
-            [mgr GET:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [self.manager GET:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 if (sucess) {
                     sucess(responseObject);
                 }
@@ -65,13 +85,13 @@ static YTKKeyValueStore *_store;
 //                NSLog(@"系统有缓存 %@",queryUser);
             }
             
-            [mgr GET:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [self.manager GET:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 if (sucess) {
                     if (!queryUser) {
                         sucess(responseObject);
 //                        NSLog(@"第一次进入系统没有缓存");
                     }
-                        [_store putObject:responseObject withId:url intoTable:_tableName];
+                    [_store putObject:responseObject withId:url intoTable:_tableName];
                 }
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 if (failur) {
@@ -91,7 +111,7 @@ static YTKKeyValueStore *_store;
  *  @param sucess 请求成功后的回调
  *  @param failur 请求失败后的回调
  */
-+(void)putWithUrl:(NSString *)url parm:(id)parm sucess:(void (^)(id json))sucess failur:(void (^)(NSError *error))failur
+-(void)putWithUrl:(NSString *)url parm:(id)parm sucess:(void (^)(id json))sucess failur:(void (^)(NSError *error))failur
 {
     [[AFHTTPSessionManager manager] PUT:url parameters:parm success:^(NSURLSessionDataTask *task, id responseObject) {
         if (sucess) {
@@ -112,10 +132,9 @@ static YTKKeyValueStore *_store;
  *  @param sucess 请求成功后的回调
  *  @param failur 请求失败后的回调
  */
-+(void)DELETE:(NSString *)URLString parameters:(NSDictionary *)parameters sucess:(void (^)(id json))sucess failur:(void (^)(NSError *error))failur
+-(void)DELETE:(NSString *)URLString parameters:(NSDictionary *)parameters sucess:(void (^)(id json))sucess failur:(void (^)(NSError *error))failur
 {
-    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-    [mgr DELETE:URLString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [self.manager DELETE:URLString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (sucess) {
             sucess(responseObject);
         }

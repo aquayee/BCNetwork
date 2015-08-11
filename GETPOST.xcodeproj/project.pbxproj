@@ -15,7 +15,7 @@
 		18E1E75F19F63A4C0008FF95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E1E75E19F63A4C0008FF95 /* Images.xcassets */; };
 		18E1E76219F63A4C0008FF95 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E1E76019F63A4C0008FF95 /* LaunchScreen.xib */; };
 		18E1E76E19F63A4C0008FF95 /* GETPOSTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E1E76D19F63A4C0008FF95 /* GETPOSTTests.m */; };
-		18E1E7C219F63A5A0008FF95 /* BaseHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E1E79F19F63A5A0008FF95 /* BaseHttpTool.m */; };
+		18E1E7C219F63A5A0008FF95 /* BCNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E1E79F19F63A5A0008FF95 /* BCNetwork.m */; };
 		FAE8AE8F1939D4C4C0297DFF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F9F2BCB8DF2D7DEAD5F8F2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +45,8 @@
 		18E1E76719F63A4C0008FF95 /* GETPOSTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GETPOSTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E1E76C19F63A4C0008FF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18E1E76D19F63A4C0008FF95 /* GETPOSTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GETPOSTTests.m; sourceTree = "<group>"; };
-		18E1E79E19F63A5A0008FF95 /* BaseHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHttpTool.h; sourceTree = "<group>"; };
-		18E1E79F19F63A5A0008FF95 /* BaseHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHttpTool.m; sourceTree = "<group>"; };
+		18E1E79E19F63A5A0008FF95 /* BCNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCNetwork.h; sourceTree = "<group>"; };
+		18E1E79F19F63A5A0008FF95 /* BCNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCNetwork.m; sourceTree = "<group>"; };
 		D0F9F2BCB8DF2D7DEAD5F8F2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3528C20F0926C99B6732341 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FEB4988DE7983F21D7A047F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,8 +136,8 @@
 		18E1E77719F63A5A0008FF95 /* GETPOST */ = {
 			isa = PBXGroup;
 			children = (
-				18E1E79E19F63A5A0008FF95 /* BaseHttpTool.h */,
-				18E1E79F19F63A5A0008FF95 /* BaseHttpTool.m */,
+				18E1E79E19F63A5A0008FF95 /* BCNetwork.h */,
+				18E1E79F19F63A5A0008FF95 /* BCNetwork.m */,
 				002E73BD1B71AD1700079F8B /* UIImageView+BCImageView.h */,
 				002E73BE1B71AD1700079F8B /* UIImageView+BCImageView.m */,
 			);
@@ -297,7 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E1E75A19F63A4B0008FF95 /* ViewController.m in Sources */,
-				18E1E7C219F63A5A0008FF95 /* BaseHttpTool.m in Sources */,
+				18E1E7C219F63A5A0008FF95 /* BCNetwork.m in Sources */,
 				18E1E75719F63A4B0008FF95 /* AppDelegate.m in Sources */,
 				002E73BF1B71AD1700079F8B /* UIImageView+BCImageView.m in Sources */,
 				18E1E75419F63A4B0008FF95 /* main.m in Sources */,
